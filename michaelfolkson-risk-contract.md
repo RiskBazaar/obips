@@ -1,5 +1,5 @@
 __OBIP__ obip-michaelfolkson-risk-contract  
-__Title__ Facilitating risk contracts  
+__Title__ Facilitating risk contracts on OpenBazaar protocol  
 __Author__ Michael Folkson <michael@riskbazaar.org>  
 __Discussions-To__: <michael@riskbazaar.org>  
 __Status__ Draft  
