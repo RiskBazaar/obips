@@ -13,7 +13,7 @@ The potential for the OpenBazaar protocol to facilitate risk contracts has been 
 
 https://medium.com/@therealopenbazaar/oracles-risk-contracts-768c09cee46c
 
-There have also been articles and white papers written by @RiskBazaar.
+There have also been articles and white papers written by @alexandrag2254.
 
 Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. We define _risk contracts_ as "a contract that pays out conditional on the occurrence of a future event".
 
