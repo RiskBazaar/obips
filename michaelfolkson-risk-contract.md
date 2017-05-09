@@ -15,11 +15,11 @@ https://medium.com/@therealopenbazaar/oracles-risk-contracts-768c09cee46c
 
 There have also been articles and white papers written by @RiskBazaar.
 
-Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. We define _risk contracts_ as "a contract that pays out conditional on the occurrence of a future event".
+Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. A _risk contract_ is defined as "a contract that pays out conditional on the occurrence of a future event".
 
+We propose that there are additions made to the protocol such that applications/clients can be built on top that enable risk contracts.
 
-
-We propose that the first steps 
+The primary addition would be to allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example. The scope of the OBIP could also expand to adding fields to the contract JSON that can be switched on/off depending on whether the use case is an e-commerce transaction or a risk contract.
 
  +
  +## Motivation
