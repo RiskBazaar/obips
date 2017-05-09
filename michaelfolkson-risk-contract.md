@@ -9,7 +9,18 @@ __Post-History__ Slack, 05/03/2017 - 05/04/2017
 __Copyright__ Public Domain  
 
 ## Abstract
-As more implementations of OpenBazaar arise, it is important that the key (and thus identity) generation process is standardised. OpenBazaar uses ed25519 elliptic identity keys; your peerID is the multihash encoded sha-256 hash of the public key. OpenBazaar currently generates keys deterministically based on the mnemonic, an important and useful feature which allows users to remember or record a simple string of text which can be later used to regenerate their OpenBazaar and bitcoin identities in case of database loss. This will also come to be useful in other OpenBazaar implementations, as a mnemonic can be used to import your identity into a different client. However, for this to work, we must agree on a standard for key generation which takes note of cross-platform and -language requirements.
+The potential for the OpenBazaar protocol to facilitate risk contracts has been discussed for a while. Discussions on the OpenBazaar Slack cumulated in this article on Oracles & Risk Contracts by @drwasho.
+
+https://medium.com/@therealopenbazaar/oracles-risk-contracts-768c09cee46c
+
+There have also been articles and white papers written by @RiskBazaar.
+
+Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. We define _risk contracts_ as "a contract that pays out conditional on the occurrence of a future event".
+
+
+
+We propose that the first steps 
+
  +
  +## Motivation
  +Currently the seed is passed through a `DeterministicReader` type. This turns the seed into a stream from which downstream functions can 'pull' bytes. Any number of bytes 'pulled' from this reader is in fact an scrypt-generated key, generating the required number of bytes from the entire seed, at a difficulty level of 512; a computationally intensive task. The original reason for this was to stretch seeds going into RSA key generation functions, which require long seeds and therefore a function like scrypt. OpenBazaar has since moved to elliptic keys, where a 32 byte seed is sufficient. It is still good practice to hash the seed, as seeds are partially leaked into ed25519 private keys, but there is no need to use an expensive key stretching function like scrypt.
