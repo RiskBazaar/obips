@@ -22,8 +22,15 @@ We propose that there are additions made to the protocol such that applications/
 The primary additions we propose are:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
+2) Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised.
 
-2) Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. A contract is only accepted (in a technical sense rather than a legal sense) when both parties have funded the multi-signature address. 
+Integrate refunds  both individuals from the multi-signature address. (you can already do this OpenBazaar?)
+
+
+
+
+
+Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. A contract is only accepted (in a technical sense rather than a legal sense) when both parties have funded the multi-signature address. 
 
 The funds still need to be removed from the wallet after each contract proposal to ensure the individual owns sufficient funds. However, they are sent to a holding address rather than the multisig address. If the proposed contract is accepted, the funds are sent to the multi-signature address. If the proposed contract is rejected, these funds are returned to the individual's wallet.
 
