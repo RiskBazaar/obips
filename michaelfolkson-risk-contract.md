@@ -17,13 +17,17 @@ There have also been articles and white papers written by @RiskBazaar.
 
 Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. A _risk contract_ is defined as "a contract that pays out conditional on the occurrence of a future event".
 
-We propose that there are additions made to the protocol such that applications/clients can be built that enable risk contracts.
+We propose that there are additions made to the protocol such that applications/clients can be built that enable peer-to-peer risk contracts.
 
-The primary additions would be:
+The primary additions we propose are:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
 
-2) Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. Unlike e-commerce listings drafted by vendors and presented to potential buyers, risk contracts may require more back and forth before coming to a bilateral agreement
+2) Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. A contract is only accepted (in a technical sense rather than a legal sense) when both parties have funded the multi-signature address. 
+
+The funds still need to be removed from the wallet after each contract proposal to ensure the individual owns sufficient funds. However, they are sent to a holding address rather than the multisig address. If the proposed contract is accepted, the funds are sent to the multi-signature address. If the proposed contract is rejected, these funds are returned to the individual's wallet.
+
+Unlike e-commerce listings drafted by vendors and presented to potential buyers, risk contracts may require more back and forth before coming to a bilateral agreement
 
 (invitation to tender, invitation to purchase)
 
