@@ -23,7 +23,7 @@ The primary additions would be:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
 
-2) Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. Unlike e-commerce listings drafted by vendors and presented to potential buyers, risk contracts will require more back and forth before coming to a bilateral agreement
+2) Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. Unlike e-commerce listings drafted by vendors and presented to potential buyers, risk contracts may require more back and forth before coming to a bilateral agreement
 
 (invitation to tender, invitation to purchase)
 
