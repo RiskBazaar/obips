@@ -22,9 +22,17 @@ We propose that there are additions made to the protocol such that applications/
 The primary additions we propose are:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
-2) Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised.
+2) Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised. 
 
-Integrate refunds  both individuals from the multi-signature address. (you can already do this OpenBazaar?)
+
+2) was previously raised in a GitHub issue in October 2016.
+
+https://github.com/OpenBazaar/openbazaar-desktop/issues/78
+
+It will add functionality to OpenBazaar transactions but it is especially important for risk contracts because the moderator is reporting on a broader range of events (e.g. sports results, elections, insurance claims) rather than just whether the buyer received the item he/she was promised. Therefore rather than just reviewing evidence provided by the buyer/vendor, the moderator is potentially going to need to research whether the specified event occurred. Also with a risk contract, both parties are putting funds at risk rather than just the buyer in an e-commerce transaction so there are likely to be longer reporting delays to release funds.
+
+
+Integrate refunds both individuals from the multi-signature address. (you can already do this OpenBazaar?)
 
 
 
