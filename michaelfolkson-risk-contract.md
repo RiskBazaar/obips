@@ -9,16 +9,6 @@ __Post-History__ Slack, 05/03/2017 - 05/04/2017
 __Copyright__ Public Domain  
 
 ## Abstract
-The potential for the OpenBazaar protocol to facilitate risk contracts has been discussed for a while. Discussions on the OpenBazaar Slack cumulated in this article on Oracles & Risk Contracts by @drwasho.
-
-https://medium.com/@therealopenbazaar/oracles-risk-contracts-768c09cee46c
-
-There have also been articles and white papers written by @RiskBazaar.
-
-https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/building-a-risk-market-for-the-digital-age.md
-
-https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/internet-for-risk-exchange.md
-
 Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. A _risk contract_ is defined as "a contract that pays out conditional on the occurrence of a future event".
 
 We propose that there are additions made to the protocol such that applications/clients can be built that enable peer-to-peer risk contracts.
@@ -48,6 +38,28 @@ The funds still need to be removed from the wallet after each contract proposal 
 (invitation to tender, invitation to purchase)
 
 ## Motivation
+
+The potential for the OpenBazaar protocol to facilitate risk contracts has been discussed for a while. Discussions on the OpenBazaar Slack cumulated in this article on Oracles & Risk Contracts by @drwasho.
+
+https://medium.com/@therealopenbazaar/oracles-risk-contracts-768c09cee46c
+
+There have also been articles and white papers written by @RiskBazaar.
+
+https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/building-a-risk-market-for-the-digital-age.md
+
+https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/internet-for-risk-exchange.md
+
+Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. A _risk contract_ is defined as "a contract that pays out conditional on the occurrence of a future event".
+
+We propose that there are additions made to the protocol such that applications/clients can be built that enable peer-to-peer risk contracts.
+
+The primary additions to the protocol we propose are:
+
+1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
+2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
+3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
+
+
  +Currently the seed is passed through a `DeterministicReader` type. This turns the seed into a stream from which downstream functions can 'pull' bytes. Any number of bytes 'pulled' from this reader is in fact an scrypt-generated key, generating the required number of bytes from the entire seed, at a difficulty level of 512; a computationally intensive task. The original reason for this was to stretch seeds going into RSA key generation functions, which require long seeds and therefore a function like scrypt. OpenBazaar has since moved to elliptic keys, where a 32 byte seed is sufficient. It is still good practice to hash the seed, as seeds are partially leaked into ed25519 private keys, but there is no need to use an expensive key stretching function like scrypt.
  +
  +The further problem with the current protocol is that it is quite Go-specific; producing a similar 'reader' which stretches every time bytes are requested is not trivial in other languages, and it would be far simpler to initially run the seed through a hash function, obtaining 32 bytes, and passing that to the generation function.
