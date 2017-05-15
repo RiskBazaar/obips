@@ -39,11 +39,11 @@ The primary additions to the protocol we propose are:
 
 Hello
 
-2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
+> 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
 
 Hello
 
-3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
+> 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
 Hello
 
