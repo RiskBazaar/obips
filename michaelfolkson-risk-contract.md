@@ -19,18 +19,6 @@ The primary additions to the protocol we propose are:
 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
-
-To be deleted
-Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised. This was previously raised in a GitHub issue in October 2016.
-
-https://github.com/OpenBazaar/openbazaar-desktop/issues/78
-
-It will add functionality to OpenBazaar transactions but it is especially important for risk contracts because the moderator is reporting on a broader range of events (e.g. sports results, elections, insurance claims) rather than just whether the buyer received the item he/she was promised. Therefore rather than just reviewing evidence provided by the buyer/vendor, the moderator is potentially going to need to research whether the specified event occurred. Also with a risk contract, both parties are putting funds at risk rather than just the buyer in an e-commerce transaction so there are likely to be longer reporting delays to release funds.
-
-
-
-
-
 Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. A contract is only accepted (in a technical sense rather than a legal sense) when both parties have funded the multi-signature address. 
 
 The funds still need to be removed from the wallet after each contract proposal to ensure the individual owns sufficient funds. However, they are sent to a holding address rather than the multisig address. If the proposed contract is accepted, the funds are sent to the multi-signature address. If the proposed contract is rejected, these funds are returned to the individual's wallet.
@@ -59,6 +47,12 @@ The primary additions to the protocol we propose are:
 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
+To be deleted
+Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised. This was previously raised in a GitHub issue in October 2016.
+
+https://github.com/OpenBazaar/openbazaar-desktop/issues/78
+
+It will add functionality to OpenBazaar transactions but it is especially important for risk contracts because the moderator is reporting on a broader range of events (e.g. sports results, elections, insurance claims) rather than just whether the buyer received the item he/she was promised. Therefore rather than just reviewing evidence provided by the buyer/vendor, the moderator is potentially going to need to research whether the specified event occurred. Also with a risk contract, both parties are putting funds at risk rather than just the buyer in an e-commerce transaction so there are likely to be longer reporting delays to release funds.
 
  +Currently the seed is passed through a `DeterministicReader` type. This turns the seed into a stream from which downstream functions can 'pull' bytes. Any number of bytes 'pulled' from this reader is in fact an scrypt-generated key, generating the required number of bytes from the entire seed, at a difficulty level of 512; a computationally intensive task. The original reason for this was to stretch seeds going into RSA key generation functions, which require long seeds and therefore a function like scrypt. OpenBazaar has since moved to elliptic keys, where a 32 byte seed is sufficient. It is still good practice to hash the seed, as seeds are partially leaked into ed25519 private keys, but there is no need to use an expensive key stretching function like scrypt.
  +
