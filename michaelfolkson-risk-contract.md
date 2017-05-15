@@ -35,7 +35,7 @@ https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/internet-for-r
 
 The primary additions to the protocol we propose are:
 
-1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
+> 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
 
 Hello
 
