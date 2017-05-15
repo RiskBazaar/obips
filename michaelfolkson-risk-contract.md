@@ -47,14 +47,12 @@ The funds still need to be removed from the wallet after each contract proposal 
 
 (invitation to tender, invitation to purchase)
 
-
- +
- +## Motivation
+## Motivation
  +Currently the seed is passed through a `DeterministicReader` type. This turns the seed into a stream from which downstream functions can 'pull' bytes. Any number of bytes 'pulled' from this reader is in fact an scrypt-generated key, generating the required number of bytes from the entire seed, at a difficulty level of 512; a computationally intensive task. The original reason for this was to stretch seeds going into RSA key generation functions, which require long seeds and therefore a function like scrypt. OpenBazaar has since moved to elliptic keys, where a 32 byte seed is sufficient. It is still good practice to hash the seed, as seeds are partially leaked into ed25519 private keys, but there is no need to use an expensive key stretching function like scrypt.
  +
  +The further problem with the current protocol is that it is quite Go-specific; producing a similar 'reader' which stretches every time bytes are requested is not trivial in other languages, and it would be far simpler to initially run the seed through a hash function, obtaining 32 bytes, and passing that to the generation function.
  +
- +## Specification
+ ## Specification
  +I propose a simple change; given the seed, in ipfs/identity.go, simply run the mnemonic-derived seed through hmac-sha-256 once to obtain a 32 byte hashed seed, and then produce a `bytes.Reader` from this. This reader can then be passed to the ed25519 library, which will then pull the first (and only) 32 bytes for use in key generation.
  +
  +In other implementations, where an ed25519 library might instead take a simple byte input instead of a go-style 'reader', one can simply hash the seed, and provide the result to the ed25519 library.
@@ -78,7 +76,7 @@ The funds still need to be removed from the wallet after each contract proposal 
  +
  +The salt choice, ie the second input to hmac-sha-256, is mostly irrelevant, it simply needs to be application specific: "OpenBazaar seed" was suggested by Chris Pacia.
  +
- +## Test Vectors
+ ## Test Vectors
  +I have created a replacement IdentityKeyFromSeed function for the Go implementation: https://github.com/duomarket/identity-obip . This contains the following test vector (using terminology from pseudocode above):  
  +Mnemonic: `mule track design catch stairs remain produce evidence cannon opera hamster burst`  
  +Seed: `5WH3Ia3gtIkXIbiA8K4nquzYDI96dx4oLXo6nVcuZJCAGIgePygVy/XxgOvKzt1Uonx82wJbGftwI4VRxGON0A==`  
