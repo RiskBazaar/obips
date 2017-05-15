@@ -47,7 +47,9 @@ In an e-commerce scenario, only one participant (the buyer) funds the multi-sign
 
 > 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
 
-Hello
+A risk contract needs a different contract JSON. 
+
+Compare OpenBazaar contract JSON to RiskBazaar contract JSON.
 
 > 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
