@@ -9,7 +9,7 @@ __Post-History__ Slack, 05/03/2017 - 05/04/2017
 __Copyright__ Public Domain  
 
 ## Abstract
-Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. A _risk contract_ is defined as "a contract that pays out conditional on the occurrence of a future event".
+Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. We are defining a _risk contract_ as "a contract that pays out conditional on the occurrence of a future event".
 
 We propose that there are additions made to the protocol such that applications/clients can be built that enable peer-to-peer risk contracts.
 
