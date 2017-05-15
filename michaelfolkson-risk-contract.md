@@ -43,7 +43,7 @@ The primary additions to the protocol we propose are:
 
 > 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
 
-In an e-commerce scenario, only one participant (the buyer) funds the multi-signature address. The vendor is selling a good/service to the buyer and so the vendor provides no upfront funds. In a risk contract scenario, there is no good/service being sold so both participants (originator and counterparty) are providing upfront funds.
+In an e-commerce scenario, only one participant (the buyer) funds the multi-signature address. The vendor is selling a good/service to the buyer and so the vendor provides no upfront funds. In a risk contract scenario, there is no good/service being sold so both participants (originator and counterparty) are funding the multi-signature address.
 
 > 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
 
