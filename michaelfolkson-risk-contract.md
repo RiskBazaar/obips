@@ -15,24 +15,27 @@ https://medium.com/@therealopenbazaar/oracles-risk-contracts-768c09cee46c
 
 There have also been articles and white papers written by @RiskBazaar.
 
+https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/building-a-risk-market-for-the-digital-age.md
+
+https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/internet-for-risk-exchange.md
+
 Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. A _risk contract_ is defined as "a contract that pays out conditional on the occurrence of a future event".
 
 We propose that there are additions made to the protocol such that applications/clients can be built that enable peer-to-peer risk contracts.
 
-The primary additions we propose are:
+The primary additions to the protocol we propose are:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
-2) Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised. 
+2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
+3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
 
-2) was previously raised in a GitHub issue in October 2016.
+To be deleted
+Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised. This was previously raised in a GitHub issue in October 2016.
 
 https://github.com/OpenBazaar/openbazaar-desktop/issues/78
 
 It will add functionality to OpenBazaar transactions but it is especially important for risk contracts because the moderator is reporting on a broader range of events (e.g. sports results, elections, insurance claims) rather than just whether the buyer received the item he/she was promised. Therefore rather than just reviewing evidence provided by the buyer/vendor, the moderator is potentially going to need to research whether the specified event occurred. Also with a risk contract, both parties are putting funds at risk rather than just the buyer in an e-commerce transaction so there are likely to be longer reporting delays to release funds.
-
-
-Integrate refunds both individuals from the multi-signature address. (you can already do this OpenBazaar?)
 
 
 
@@ -42,12 +45,8 @@ Add the ability to cancel and/or negotiate a contract before sending funds to th
 
 The funds still need to be removed from the wallet after each contract proposal to ensure the individual owns sufficient funds. However, they are sent to a holding address rather than the multisig address. If the proposed contract is accepted, the funds are sent to the multi-signature address. If the proposed contract is rejected, these funds are returned to the individual's wallet.
 
-Unlike e-commerce listings drafted by vendors and presented to potential buyers, risk contracts may require more back and forth before coming to a bilateral agreement
-
 (invitation to tender, invitation to purchase)
 
-
- The scope of the OBIP could also expand to adding fields to the contract JSON that can be switched on/off depending on whether the use case is an e-commerce transaction or a risk contract.
 
  +
  +## Motivation
