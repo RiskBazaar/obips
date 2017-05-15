@@ -33,8 +33,6 @@ https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/building-a-ris
 
 https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/internet-for-risk-exchange.md
 
-Although the protocol at this stage is primarily built for decentralized e-commerce, it is broadly agreed that a longer term aim should be to build a protocol for decentralized trade which would include the ability to enter into risk contracts. A _risk contract_ is defined as "a contract that pays out conditional on the occurrence of a future event".
-
 We propose that there are additions made to the protocol such that applications/clients can be built that enable peer-to-peer risk contracts.
 
 The primary additions to the protocol we propose are:
