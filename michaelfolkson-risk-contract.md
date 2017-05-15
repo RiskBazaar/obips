@@ -33,13 +33,21 @@ https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/building-a-ris
 
 https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/internet-for-risk-exchange.md
 
-We propose that there are additions made to the protocol such that applications/clients can be built that enable peer-to-peer risk contracts.
-
 The primary additions to the protocol we propose are:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
+
+Hello
+
 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
+
+Hello
+
 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
+
+Hello
+
+
 
 Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. A contract is only accepted (in a technical sense rather than a legal sense) when both parties have funded the multi-signature address. 
 
