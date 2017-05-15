@@ -23,13 +23,17 @@ The primary additions to the protocol we propose are:
 
 ## Motivation
 
-The potential for the OpenBazaar protocol to facilitate risk contracts has been discussed for a while. Discussions on the OpenBazaar Slack cumulated in this article on Oracles & Risk Contracts by @drwasho.
+The potential for the OpenBazaar protocol to facilitate risk contracts has been discussed for a while. Discussions on the OpenBazaar Slack cumulated in this November 2015 article on Oracles & Risk Contracts by @drwasho.
 
 https://medium.com/@therealopenbazaar/oracles-risk-contracts-768c09cee46c
 
 There have also been articles and white papers written by @RiskBazaar.
 
+Building a risk market for the digital age (August 2015)
+
 https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/building-a-risk-market-for-the-digital-age.md
+
+The internet for risk exchange (April 2017)
 
 https://github.com/RiskBazaar/RiskBazaar/blob/master/white-papers/internet-for-risk-exchange.md
 
