@@ -17,9 +17,8 @@ The primary additions to the protocol we propose are:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
-3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
-
-
+3) The option to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
+4) The ability to grant permission for the OpenBazaar application to share data with other applications within the user interface.
 
 ## Motivation
 
@@ -60,6 +59,10 @@ Add the ability to cancel and/or negotiate a contract before sending funds to th
 The funds still need to be removed from the wallet after each contract proposal to ensure the individual owns sufficient funds. However, they are sent to a holding address rather than the multisig address. If the proposed contract is accepted, the funds are sent to the multi-signature address. If the proposed contract is rejected, these funds are returned to the individual's wallet.
 
 (invitation to tender, invitation to purchase)
+
+> 4) The ability to grant permission for the OpenBazaar application to share data with other applications within the user interface.
+
+Currently to share data with other applications the user needs to edit their config file which is located at ```~/Library/Application Support/OpenBazaar/``` CORS is disabled by default for security reasons and it would need to be enabled to be able to share data with other applications.
 
 To be deleted
 Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised. This was previously raised in a GitHub issue in October 2016.
