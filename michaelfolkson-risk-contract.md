@@ -52,7 +52,7 @@ Compare OpenBazaar contract JSON to RiskBazaar contract JSON.
 
 > 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
-This could be done through the existing messaging system or uploading an attachment. Ideally an editable, completed contract form would be sent between the two parties until both parties accepted the terms.
+Ideally an editable, completed contract form would be sent between the two parties until both parties accepted the terms. An inferior alternative would be for negotiations to be carried out through the existing messaging system or by uploading and editing attachments.
 
 Add the ability to cancel and/or negotiate a contract before sending funds to the multi-signature address. A contract is only accepted (in a technical sense rather than a legal sense) when both parties have funded the multi-signature address. 
 
