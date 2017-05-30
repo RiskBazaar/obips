@@ -62,7 +62,7 @@ The funds still need to be removed from the wallet after each contract proposal 
 
 > 4) The ability to grant permission for the OpenBazaar application to share data with other applications within the user interface.
 
-Currently to share data with other applications the user needs to edit their config file which is located at ```~/Library/Application Support/OpenBazaar/``` CORS is disabled by default for security reasons and it would need to be enabled to be able to share data with other applications.
+As it stands, to share data with other applications the user needs to edit their config file which is located at ```~/Library/Application Support/OpenBazaar/``` CORS is disabled by default for security reasons and it would need to be enabled to be able to share data with other applications.
 
 To be deleted
 Flexible moderator fees and involvement - The moderator is able to receive a fee for every transaction they are assigned as the moderator (even when there is no dispute or before a dispute has been raised). The moderator is also able to report (sign a transaction from the multi-signature address) even before a dispute has been raised. This was previously raised in a GitHub issue in October 2016.
