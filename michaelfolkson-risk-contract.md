@@ -16,7 +16,7 @@ We propose that there are additions made to the protocol such that applications/
 The primary additions to the protocol we propose are:
 
 1) Allow two individuals to fund the multi-signature address rather than just one individual in the e-commerce example.
-2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
+2) A switch to risk contract protobuf (from e-commerce protobuf) when transaction is flagged as a risk contract.
 3) The option to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 4) The ability to grant permission for the OpenBazaar application to share data with other applications within the user interface.
 
@@ -48,7 +48,7 @@ In an e-commerce scenario, only one participant (the buyer) funds the multi-sign
 
 A risk contract needs a different contract JSON. 
 
-Compare OpenBazaar contract JSON to RiskBazaar contract JSON.
+Compare OpenBazaar contract protobuf to RiskBazaar contract JSON/protobuf.
 
 > 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
