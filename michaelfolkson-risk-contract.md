@@ -48,13 +48,14 @@ Link to OpenBazaar Bitcoin transaction.
 
 > 2) A switch to risk contract protobuf (from e-commerce protobuf) when transaction is flagged as a risk contract.
 
-The current OpenBazaar contract protobuf is  https://github.com/OpenBazaar/openbazaar-go/blob/master/pb/contracts.pb.go 
+The current OpenBazaar contract protobuf (referred to as the "e-commerce protobuf" for convenience) is located here:  https://github.com/OpenBazaar/openbazaar-go/blob/master/pb/contracts.pb.go 
 
-Many variables are not required for risk contracts (e.g. ```Listing_ShippingOption_ShippingType_name```)
+Many variables in this e-commerce protobuf are not required for risk contracts (e.g. ```Listing_ShippingOption_ShippingType_name```). It is possible to ignore these variables for risk contracts. However, risk contracts require additional variables that aren't currently included in the e-commerce protobuf. Therefore we need to decide how new variables are added to the contract protobuf. The cleanest and the safest way (least disruption to e-commerce transactions) is to have the ability to switch to a different contract type when there is a particular flag in a variable like ```Listing_Metadata_ContractType_value```. Currently, there is
 
-A risk contract needs a different contract protobuf. 
-
-Compare OpenBazaar contract protobuf to RiskBazaar contract JSON/protobuf.
+	"PHYSICAL_GOOD": 0,
+	"DIGITAL_GOOD":  1,
+	"SERVICE":       2,
+	"CROWD_FUND":    3,
 
 > 3) The ability to negotiate and/or reject a proposed risk contract before sending funds to the multi-signature address.
 
