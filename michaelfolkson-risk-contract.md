@@ -44,9 +44,15 @@ The primary additions to the protocol we propose are:
 
 In an e-commerce scenario, only one participant (the buyer) funds the multi-signature address. The vendor is selling a good/service to the buyer and so the vendor provides no upfront funds. In a risk contract scenario, there is no good/service being sold so both participants (originator and counterparty) are funding the multi-signature address.
 
-> 2) A switch to risk contract JSON (from e-commerce JSON) when transaction is flagged as a risk contract.
+Link to OpenBazaar Bitcoin transaction.
 
-A risk contract needs a different contract JSON. 
+> 2) A switch to risk contract protobuf (from e-commerce protobuf) when transaction is flagged as a risk contract.
+
+The current OpenBazaar contract protobuf is  https://github.com/OpenBazaar/openbazaar-go/blob/master/pb/contracts.pb.go 
+
+Many variables are not required for risk contracts (e.g. ```Listing_ShippingOption_ShippingType_name```)
+
+A risk contract needs a different contract protobuf. 
 
 Compare OpenBazaar contract protobuf to RiskBazaar contract JSON/protobuf.
 
